@@ -1,18 +1,17 @@
 import { render } from '@czechitas/render';
 import '../global.css';
 import './index.css';
+import { WorkshopIntro } from '../components/WorkshopIntro';
+import { Instructor } from '../components/Instructor';
+import { Venue } from '../components/Venue';
+
+const response = await fetch('http://localhost:4000/api/workshops/0');
+const workshopInfo = await response.json();
 
 document.querySelector('#root').innerHTML = render(
   <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Webová aplikace</h1>
-    </header>
-    <main>
-      <p>Startovací šablona pro webovou aplikaci v JavaScriptu s JSX. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-kodim-app">create-kodim-app</a>.</p>
-    </main>
-    <footer>
-      <p>Czechitas, Digitální akademie: Web</p>
-    </footer>
+    <WorkshopIntro workshopInfo={workshopInfo}/>
+    <Instructor workshopInfo={workshopInfo}/>
+    <Venue workshopInfo={workshopInfo}/>
   </div>
 );

@@ -6,10 +6,34 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
+  color: #4a4a4a;
 }
 
 .container {
-  max-width: 20rem;
+  max-width: 24rem;
   margin-right: auto;
   margin-left: auto;
+  padding: 2rem;
+  background: #ececec;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0.6rem 0;
+}
+
+h4 {
+  margin: 0.6rem 0;
+}
+
+p, span {
+  font-size: 14px;
+  display: block;
 }
