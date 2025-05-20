@@ -1,10 +1,11 @@
 export const Venue = (props) => {
+    const { streetName , street, city } = props;
     return (
         <div className="container-detail">
             <h4>Místo konání:</h4>
-            <span>{props.workshopInfo.data.venue.name}</span>
-            <span>{props.workshopInfo.data.venue.street}</span>
-            <span>{props.workshopInfo.data.venue.city}</span>
+            <span>{streetName}</span>
+            <span>{street}</span>
+            <span>{city}</span>
         </div>
     )
 }

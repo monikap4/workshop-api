@@ -10,8 +10,8 @@ const workshopInfo = await response.json();
 
 document.querySelector('#root').innerHTML = render(
   <div className="container">
-    <WorkshopIntro workshopInfo={workshopInfo}/>
-    <Instructor workshopInfo={workshopInfo}/>
-    <Venue workshopInfo={workshopInfo}/>
+    <WorkshopIntro title={workshopInfo.data.title} description={workshopInfo.data.description} />
+    <Instructor name={workshopInfo.data.instructor.name}/>
+    <Venue streetName={workshopInfo.data.venue.name} street = {workshopInfo.data.venue.street} city={workshopInfo.data.venue.city} />
   </div>
 );

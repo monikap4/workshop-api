@@ -1,8 +1,9 @@
 export const Instructor = (props) => {
+    const { name } = props;
     return (
         <div className="container-detail">
             <h4>Instruktor:</h4>
-            <span>{props.workshopInfo.data.instructor.name}</span>
+            <span>{name}</span>
         </div>
     )
 }
